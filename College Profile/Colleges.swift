@@ -13,24 +13,25 @@ class Colleges: NSObject
     
     var collegeName = ""
     var location = ""
+    var mascot = ""
     var numberOfStudents = 0
     var image = UIImage(named: "Defualt")
     
     
-    init(CollegeName: String, Location: String, NumberOfStudents: Int, Image: UIImage)
+    init(CollegeName: String, Location: String, Mascot: String, NumberOfStudents: Int, Image: UIImage)
     {
         super.init()
         collegeName = CollegeName
         location = Location
+        mascot = Mascot
         numberOfStudents = NumberOfStudents
         image = Image
     }
     
-    init(CollegeName: String, Location: String, NumberOfStudents: Int)
+    init(CollegeName: String, Location: String)
     {
         super.init()
         collegeName = CollegeName
         location = Location
-        numberOfStudents = NumberOfStudents
     }
 }
