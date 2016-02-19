@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func editButtonTapped(sender: UIBarButtonItem)
     {
-        
+        myTableView.editing = !myTableView.editing
     }
     
     
