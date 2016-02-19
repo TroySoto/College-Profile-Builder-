@@ -44,6 +44,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1aJ-6A-8HM" kind="show" id="VDs-SU-D4Y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -75,44 +78,64 @@
                         <viewControllerLayoutGuide type="bottom" id="C2K-z8-EMC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HCf-gd-bnu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sE8-M6-ZCt">
-                                <rect key="frame" x="179" y="47" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sE8-M6-ZCt">
+                                <rect key="frame" x="0.0" y="64" width="600" height="603"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nwu-Yw-hJF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nwu-Yw-hJF">
                                 <rect key="frame" x="220" y="230" width="158" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-Um-hKp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-Um-hKp">
                                 <rect key="frame" x="220" y="268" width="158" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mascot" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2D-Ek-d60">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mascot" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2D-Ek-d60">
                                 <rect key="frame" x="220" y="306" width="158" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmc-VH-jBo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmc-VH-jBo">
                                 <rect key="frame" x="220" y="344" width="158" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFg-fM-B4D">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFg-fM-B4D">
                                 <rect key="frame" x="268" y="405" width="63" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="1aJ-6A-8HM" eventType="touchUpInside" id="yTg-OW-tKS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bmc-VH-jBo" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="PNy-yE-5WK"/>
+                            <constraint firstItem="Nwu-Yw-hJF" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="RY4-Zg-Oc8"/>
+                            <constraint firstItem="dOK-Um-hKp" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="Sdp-ek-lIH"/>
+                            <constraint firstItem="sE8-M6-ZCt" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="X45-oR-o9V"/>
+                            <constraint firstItem="mFg-fM-B4D" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="XLU-K7-06w"/>
+                            <constraint firstItem="g2D-Ek-d60" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="Ykd-Ya-IpU"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collegeNameTextField" destination="Nwu-Yw-hJF" id="UQv-8Y-ggD"/>
+                        <outlet property="locationTextField" destination="dOK-Um-hKp" id="ePu-k7-zJZ"/>
+                        <outlet property="mascotTextField" destination="g2D-Ek-d60" id="ldi-du-hsg"/>
+                        <outlet property="myImageView" destination="sE8-M6-ZCt" id="AAn-q9-E3V"/>
+                        <outlet property="numberOfStudentsTextField" destination="bmc-VH-jBo" id="Fm9-I7-Ya3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bw-0W-gJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="334"/>
+            <point key="canvasLocation" x="1767.5" y="333.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VL3-zj-yhQ">

@@ -20,9 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        colleges.append(Colleges(CollegeName: "USC", Location: "Los Angeles, California", Mascot: "Trojans",NumberOfStudents: 43000, Image: UIImage(named: "")!))
-        colleges.append(Colleges(CollegeName: "UCLA", Location: "Los Angeles, California", Mascot: "Bruins",NumberOfStudents: 43239, Image: UIImage(named: "")!))
-        colleges.append(Colleges(CollegeName: "UC Berkeley", Location: "Berkeley, California", Mascot: "Oski", NumberOfStudents: 37581, Image: UIImage(named: "")!))
+        colleges.append(Colleges(CollegeName: "USC", Location: "Los Angeles, California", Mascot: "Trojans",NumberOfStudents: 43000, Image: UIImage(named: "usc")!))
+        colleges.append(Colleges(CollegeName: "UCLA", Location: "Los Angeles, California", Mascot: "Bruins",NumberOfStudents: 43239, Image: UIImage(named: "ucla")!))
+        colleges.append(Colleges(CollegeName: "UC Berkeley", Location: "Berkeley, California", Mascot: "Oski", NumberOfStudents: 37581, Image: UIImage(named: "berkeley")!))
         
     }
 
@@ -54,18 +54,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
     {
-        let superhero = colleges[sourceIndexPath.row]
+        let college = colleges[sourceIndexPath.row]
         colleges.removeAtIndex(sourceIndexPath.row)
-        colleges.insert(superhero, atIndex: destinationIndexPath.row)
+        colleges.insert(college, atIndex: destinationIndexPath.row)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let detailVC = segue.destinationViewController as! DetailViewController
+        let detailVC = segue.destinationViewController as! DetailedViewController
         let selectedRow = myTableView.indexPathForSelectedRow?.row
-        detailVC.superhero = colleges[selectedRow!]
+        detailVC.college = colleges[selectedRow!]
         
     }
 }
