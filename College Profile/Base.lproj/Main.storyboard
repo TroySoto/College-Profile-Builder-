@@ -54,8 +54,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tEo-I7-iz6">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="AfI-wi-G2p"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fik-eo-F4K"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="AfI-wi-G2p">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="BYZ-38-t0r" id="uiG-gS-nJa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fik-eo-F4K">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="7dw-y4-7BO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="izU-PA-nbT" id="hA3-s0-gvS"/>

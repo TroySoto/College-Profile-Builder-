@@ -26,6 +26,52 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 
+    @IBAction func addButtonTapped(sender: UIBarButtonItem)
+    {
+        let myAlert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        myAlert.addAction(cancelAction)
+        
+        let addAction = UIAlertAction(title: "Add", style: .Default) { (addAction) -> Void in
+            let collegeNameTextField = myAlert.textFields![0] as UITextField
+            let locationTextField = myAlert.textFields![1] as UITextField
+            let mascotTextField = myAlert.textFields![2] as UITextField
+            let numberOfStudentsTextField = myAlert.textFields![3] as UITextField
+            self.colleges.append(Colleges(CollegeName: collegeNameTextField.text!, Location: locationTextField.text!, Mascot: mascotTextField.text!, NumberOfStudents: Int(numberOfStudentsTextField.text!)!))
+            self.myTableView.reloadData()
+        }
+        
+        myAlert.addTextFieldWithConfigurationHandler
+            { (collegeNameTextField) -> Void in
+                collegeNameTextField.placeholder = "Add College Name"
+        }
+        
+        myAlert.addTextFieldWithConfigurationHandler
+            { (locationTextField) -> Void in
+                locationTextField.placeholder = "Add Location"
+        }
+        
+        myAlert.addTextFieldWithConfigurationHandler
+            {(mascotTextField) -> Void in
+                mascotTextField.placeholder = "Add Mascot"
+        }
+        
+        myAlert.addTextFieldWithConfigurationHandler
+            {(numberOfStudentsTextField) -> Void in
+                numberOfStudentsTextField.placeholder = "Add Number of Students"
+                
+        }
+        myAlert.addAction(addAction)
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
+    }
+    
+    @IBAction func editButtonTapped(sender: UIBarButtonItem)
+    {
+        
+    }
+    
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
