@@ -55,11 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tEo-I7-iz6">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="AfI-wi-G2p"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fik-eo-F4K">
-                            <connections>
-                                <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="tOi-AQ-W7s"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fik-eo-F4K"/>
                     </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="izU-PA-nbT" id="hA3-s0-gvS"/>
@@ -106,8 +102,8 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFg-fM-B4D">
                                 <rect key="frame" x="268" y="405" width="63" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="1aJ-6A-8HM" eventType="touchUpInside" id="yTg-OW-tKS"/>

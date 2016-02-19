@@ -26,10 +26,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 
-    @IBAction func addButtonTapped(sender: AnyObject)
-    {
-        
-    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
