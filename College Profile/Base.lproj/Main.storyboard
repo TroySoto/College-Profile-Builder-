@@ -90,27 +90,27 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="603"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nwu-Yw-hJF">
-                                <rect key="frame" x="220" y="230" width="158" height="30"/>
+                                <rect key="frame" x="102" y="161" width="170" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-Um-hKp">
-                                <rect key="frame" x="220" y="268" width="158" height="30"/>
+                                <rect key="frame" x="102" y="199" width="170" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mascot" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2D-Ek-d60">
-                                <rect key="frame" x="220" y="306" width="158" height="30"/>
+                                <rect key="frame" x="102" y="237" width="170" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmc-VH-jBo">
-                                <rect key="frame" x="220" y="344" width="158" height="30"/>
+                                <rect key="frame" x="102" y="275" width="170" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFg-fM-B4D">
-                                <rect key="frame" x="268" y="405" width="63" height="56"/>
+                                <rect key="frame" x="156" y="386" width="63" height="56"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Save"/>
@@ -118,6 +118,20 @@
                                     <action selector="saveButtonTapped:" destination="1aJ-6A-8HM" eventType="touchUpInside" id="yTg-OW-tKS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEY-Fb-0bs">
+                                <rect key="frame" x="125" y="463" width="124" height="89"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go To Site"/>
+                                <connections>
+                                    <action selector="goToSiteButtonTapped:" destination="1aJ-6A-8HM" eventType="touchUpInside" id="Nwf-ER-Txg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSG-jA-w00">
+                                <rect key="frame" x="102" y="313" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -126,6 +140,7 @@
                             <constraint firstItem="dOK-Um-hKp" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="Sdp-ek-lIH"/>
                             <constraint firstItem="sE8-M6-ZCt" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="X45-oR-o9V"/>
                             <constraint firstItem="mFg-fM-B4D" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="XLU-K7-06w"/>
+                            <constraint firstItem="hSG-jA-w00" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="XsO-T9-Ayv"/>
                             <constraint firstItem="g2D-Ek-d60" firstAttribute="centerX" secondItem="HCf-gd-bnu" secondAttribute="centerX" id="Ykd-Ya-IpU"/>
                         </constraints>
                     </view>
@@ -136,6 +151,7 @@
                         <outlet property="mascotTextField" destination="g2D-Ek-d60" id="ldi-du-hsg"/>
                         <outlet property="myImageView" destination="sE8-M6-ZCt" id="AAn-q9-E3V"/>
                         <outlet property="numberOfStudentsTextField" destination="bmc-VH-jBo" id="Fm9-I7-Ya3"/>
+                        <outlet property="webpageTextField" destination="hSG-jA-w00" id="wT0-wc-Ptz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bw-0W-gJc" userLabel="First Responder" sceneMemberID="firstResponder"/>

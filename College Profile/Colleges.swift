@@ -16,9 +16,9 @@ class Colleges: NSObject
     var mascot = ""
     var numberOfStudents = 0
     var image = UIImage(named: "Defualt")
+    var webpageURL = ""
     
-    
-    init(CollegeName: String, Location: String, Mascot: String, NumberOfStudents: Int, Image: UIImage)
+    init(CollegeName: String, Location: String, Mascot: String, NumberOfStudents: Int, Image: UIImage, WebpageURL: String)
     {
         super.init()
         collegeName = CollegeName
@@ -26,14 +26,16 @@ class Colleges: NSObject
         mascot = Mascot
         numberOfStudents = NumberOfStudents
         image = Image
+        webpageURL = WebpageURL
     }
     
-    init(CollegeName: String, Location: String, Mascot: String, NumberOfStudents: Int)
+    init(CollegeName: String, Location: String, Mascot: String, NumberOfStudents: Int, WebpageURL: String)
     {
         super.init()
         collegeName = CollegeName
         location = Location
         mascot = Mascot
         numberOfStudents = NumberOfStudents
+        webpageURL = WebpageURL
     }
 }

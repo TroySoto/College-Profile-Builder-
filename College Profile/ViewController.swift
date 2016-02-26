@@ -20,12 +20,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        colleges.append(Colleges(CollegeName: "USC", Location: "Los Angeles, California", Mascot: "Trojans",NumberOfStudents: 43000, Image: UIImage(named: "usc")!))
-        colleges.append(Colleges(CollegeName: "UCLA", Location: "Los Angeles, California", Mascot: "Bruins",NumberOfStudents: 43239, Image: UIImage(named: "ucla")!))
-        colleges.append(Colleges(CollegeName: "UC Berkeley", Location: "Berkeley, California", Mascot: "Oski", NumberOfStudents: 37581, Image: UIImage(named: "berkeley")!))
+        colleges.append(Colleges(CollegeName: "USC", Location: "Los Angeles, California", Mascot: "Trojans",NumberOfStudents: 43000, Image: UIImage(named: "usc")!, WebpageURL: "http://www.usc.edu"))
+        colleges.append(Colleges(CollegeName: "UCLA", Location: "Los Angeles, California", Mascot: "Bruins",NumberOfStudents: 43239, Image: UIImage(named: "ucla")!, WebpageURL: "http://www.ucla.edu"))
+        colleges.append(Colleges(CollegeName: "UC Berkeley", Location: "Berkeley, California", Mascot: "Oski", NumberOfStudents: 37581, Image: UIImage(named: "berkeley")!, WebpageURL: "http://www.berkeley.edu"))
         
     }
-
+    
+    
     @IBAction func addButtonTapped(sender: UIBarButtonItem)
     {
         let myAlert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
@@ -37,7 +38,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let locationTextField = myAlert.textFields![1] as UITextField
             let mascotTextField = myAlert.textFields![2] as UITextField
             let numberOfStudentsTextField = myAlert.textFields![3] as UITextField
-            self.colleges.append(Colleges(CollegeName: collegeNameTextField.text!, Location: locationTextField.text!, Mascot: mascotTextField.text!, NumberOfStudents: Int(numberOfStudentsTextField.text!)!))
+            let webpageTextField = myAlert.textFields![4] as UITextField
+            self.colleges.append(Colleges(CollegeName: collegeNameTextField.text!, Location: locationTextField.text!, Mascot: mascotTextField.text!, NumberOfStudents: Int(numberOfStudentsTextField.text!)!, Image: UIImage(named: "default")!, WebpageURL: webpageTextField.text!))
             self.myTableView.reloadData()
         }
         
@@ -61,10 +63,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 numberOfStudentsTextField.placeholder = "Add Number of Students"
                 
         }
+        
+        myAlert.addTextFieldWithConfigurationHandler
+            {(webpageTextField) -> Void in
+                webpageTextField.placeholder = "Add Webpage of School"
+                webpageTextField.keyboardType = UIKeyboardType.URL
+        }
+        
         myAlert.addAction(addAction)
         
         self.presentViewController(myAlert, animated: true, completion: nil)
     }
+    
     
     @IBAction func editButtonTapped(sender: UIBarButtonItem)
     {
@@ -113,7 +123,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let detailVC = segue.destinationViewController as! DetailedViewController
         let selectedRow = myTableView.indexPathForSelectedRow?.row
         detailVC.college = colleges[selectedRow!]
-        
     }
+    
+    
+    
 }
 
